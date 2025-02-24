@@ -213,6 +213,12 @@ resource "google_project_iam_member" "deploy_job_runner" {
   member  = "serviceAccount:${google_service_account.cloud_deploy.email}"
 }
 
+resource "google_project_iam_member" "deploy_job_runner_artifact_reader" {
+  project = var.project_id
+  role    = "roles/artifactregistry.reader"
+  member  = "serviceAccount:${google_service_account.cloud_deploy.email}"
+}
+
 resource "google_project_iam_member" "deploy_run_admin" {
   project = var.project_id
   role    = "roles/run.admin"
