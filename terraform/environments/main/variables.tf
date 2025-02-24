@@ -23,6 +23,12 @@ variable "run_service_name" {
   default     = "dev-journey"
 }
 
+variable "region" {
+  type        = string
+  description = "The region where the Cloud Run service will run."
+  default     = "europe-west1"
+}
+
 variable "github_repository_url" {
   type        = string
   description = "URL of connected GitHub repository (https://github.com/repo_owner/repo_name)"
