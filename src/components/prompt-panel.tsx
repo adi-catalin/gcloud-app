@@ -68,7 +68,7 @@ export default function Component() {
         <div className={`space-y-4 ${allItemsCollected ? 'h-0 opacity-0' : 'opacity-100'}`}>
           <div className={`space-y-4 transition-opacity ease-in-out delay-75 duration-1000 ${allItemsCollected ? 'opacity-0' : 'opacity-100'}`}>
             <p>
-              Hello Traveler, you have started your journey in exploring Google Cloud.
+              Hello Traveler X, you have started your journey in exploring Google Cloud.
               Your environment holds valuable technologies that you must gather to complete your mission.
               To complete the mission, you must gather the technologies used to
               {' '}
