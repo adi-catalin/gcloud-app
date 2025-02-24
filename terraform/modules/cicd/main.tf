@@ -102,6 +102,7 @@ resource "google_project_iam_member" "builder_run_developer" {
 
 resource "google_cloudbuild_trigger" "app_new_build" {
   project         = var.project_id
+  location        = var.region
   name            = "dev-journey-app-build"
   description     = "Initiates new build of ${var.run_service_name}. Triggers by changes to app on main branch of source repo."
   service_account = google_service_account.cloud_build.id
@@ -139,6 +140,7 @@ resource "google_cloudbuild_trigger" "app_new_build" {
 
 resource "google_cloudbuild_trigger" "app_new_release" {
   project         = var.project_id
+  location        = var.region
   name            = "dev-journey-new-release"
   description     = "Triggers on any new build pushed to Artifact Registry. Creates a new release in Cloud Deploy."
   service_account = google_service_account.cloud_build.id
