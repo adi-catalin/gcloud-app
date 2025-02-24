@@ -18,7 +18,7 @@ import { Mission } from "src/models/Mission";
 export const missions: Mission[] = [
   {
     id: "abc",
-    title: "Build and create a Node.js job in Cloud Run",
+    title: "Build and create a Node.js job in Cloud Run (2)",
     technologies: ['cloud_run', 'container_registry', 'cloud_build'],
     learningResources: [
       {
